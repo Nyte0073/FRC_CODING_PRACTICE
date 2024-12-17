@@ -2,6 +2,8 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix6.hardware.TalonFX;
+
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.motorcontrol.Victor;
@@ -10,11 +12,11 @@ import frc.robot.Constants;
 
 public class DriveTrain extends SubsystemBase {
 
-  private Victor leftMotor = new Victor(Constants.LEFT_MOTOR);
-  private Victor rightMotor = new Victor(Constants.RIGHT_MOTOR);
+  private TalonFX leftMotor = new TalonFX(4);
+  private TalonFX rightMotor = new TalonFX(5);
 
   public DriveTrain() {
-    
+`
   }
 
   private DifferentialDrive differentialDrive = new DifferentialDrive(leftMotor, rightMotor);
